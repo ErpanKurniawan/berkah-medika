@@ -53,9 +53,9 @@
               <strong>Terimakasih!</strong> Pesan Anda Berhasil Dikirim.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form name="my-contact">
+            <form name="DataPengeluaran">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama</label>
+                <label for="name" class="form-label">Nama Pengeluaran</label>
                 <input type="name" class="form-control" id="name" aria-describedby="name" name="nama" />
               </div>
 
@@ -91,5 +91,31 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+    <script>
+      const scriptURL = "https://script.google.com/macros/s/AKfycbxn-06k3rrBdQvtZYGM2vh0OnZ0aCvt1t6xHyvQ6LzWLKw3W__KncTSp3BlI9KSWgXfFQ/exec";
+      const form = document.forms["DataPengeluaran"];
+
+      const btnKirim = document.querySelector(".btn-kirim");
+      const btnLoading = document.querySelector(".btn-loading");
+      const myAlert = document.querySelector(".my-alert");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        //ketika sumbit di klik hilangkan tombol kirim
+        btnLoading.classList.toggle("d-none");
+        btnKirim.classList.toggle("d-none");
+
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            btnLoading.classList.toggle("d-none");
+            btnKirim.classList.toggle("d-none");
+            myAlert.classList.toggle("d-none");
+            form.reset();
+            console.log("Success!", response);
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
+    </script>
   </body>
 </html>
