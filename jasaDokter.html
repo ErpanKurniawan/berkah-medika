@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Data Pengeluaran</title>
+    <title>Jasa Dokter</title>
     <link rel="stylesheet" href="style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous" />
     <!-- bootsrap icon -->
@@ -28,6 +28,10 @@
                 <li><a class="dropdown-item" href="dataPasien.html">Input Data Pasien</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="dataPengeluaran.html">Input Data Pengeluaran</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="jasaDokter.html">Input Jasa Dokter</a></li>
+                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="jasaStaff.html">Input Jasa Staff</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -36,6 +40,7 @@
                 <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/139mG9RyIadSgBiFXHRRRvMoDf6xghuG7awGQLy8sqEk/edit?usp=drivesdk">Laporan Data Pasien</a></li>
                 <li><hr class="dropdown-divider" /></li>
                 <li><a class="dropdown-item" href="https://docs.google.com/spreadsheets/d/1ocm0iAZQufvDUxGotrlGggwRmXqxCWbfXWrYYmzS2FA/edit?usp=drivesdk">Laporan Data Pengeluaran</a></li>
+                <li><a class="dropdown-item" href="">Laporan Jasa Dokter</a></li>
               </ul>
             </li>
           </ul>
@@ -48,7 +53,7 @@
       <div class="container pt-3">
         <div class="row text-center mb-4">
           <div class="col">
-            <h2>Input Data Pengeluaran</h2>
+            <h2>Input Jasa Dokter</h2>
           </div>
         </div>
         <div class="row justify-content-center mb-5">
@@ -57,15 +62,30 @@
               <strong>Terimakasih!</strong> Pesan Anda Berhasil Dikirim.
               <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
             </div>
-            <form name="DataPengeluaran">
+            <form name="JasaDokter">
               <div class="mb-3">
-                <label for="name" class="form-label">Nama Pengeluaran</label>
-                <input type="name" class="form-control" id="name" aria-describedby="name" name="pengeluaran" />
+                <label for="number" class="form-label">Uang Duduk (Rp. 75.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="uang_duduk" />
               </div>
-
               <div class="mb-3">
-                <label for="number" class="form-label">Nominal</label>
-                <input type="number" class="form-control" id="number" aria-describedby="number" name="nominal" />
+                <label for="number" class="form-label">Jumlah Pasien (Rp. 10.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="jml_pasien" />
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Pasien Malam (Rp. 10.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="pasien_malam" />
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Tindakan Suntik (Rp. 5.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="suntik" />
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Tindakan GDS (Rp. 20.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="gds" />
+              </div>
+              <div class="mb-3">
+                <label for="number" class="form-label">Observasi (Rp. 150.000)</label>
+                <input type="number" class="form-control" id="number" aria-describedby="number" name="observasi" />
               </div>
 
               <button type="submit" class="btn btn-danger btn-kirim">Submit</button>
@@ -77,17 +97,17 @@
           </div>
         </div>
       </div>
-      <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#0d6efd"
           fill-opacity="1"
           d="M0,288L48,272C96,256,192,224,288,197.3C384,171,480,149,576,165.3C672,181,768,235,864,250.7C960,267,1056,245,1152,250.7C1248,256,1344,288,1392,304L1440,320L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
         ></path>
-      </svg> -->
+      </svg>
     </section>
 
     <!-- footer -->
-    <footer class="bg-primary fixed-bottom text-white text-center pt-3">
+    <footer class="bg-primary text-white text-center pb-2">
       <p>Created with <i class="bi bi-arrow-through-heart-fill text-danger"></i> <a href="" class="text-white fw-bold">Erpan Kurniawan</a></p>
       <a href="https://www.instagram.com/erpan_kr/" class="text-white fw-bold"><i class="bi bi-instagram text-dark"></i></a>
       <a href="" class="text-white fw-bold"><i class="bi bi-facebook text-dark mb-3"></i></a>
@@ -96,8 +116,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <script>
-      const scriptURL = "https://script.google.com/macros/s/AKfycbxn-06k3rrBdQvtZYGM2vh0OnZ0aCvt1t6xHyvQ6LzWLKw3W__KncTSp3BlI9KSWgXfFQ/exec";
-      const form = document.forms["DataPengeluaran"];
+      const scriptURL = "https://script.google.com/macros/s/AKfycbyH3GawmgfPTptsvWAMADVCxhqmzVkEI0u5ofICVpO7-aV2WVrouc7l19pAGwcesCA_/exec";
+      const form = document.forms["JasaDokter"];
 
       const btnKirim = document.querySelector(".btn-kirim");
       const btnLoading = document.querySelector(".btn-loading");
